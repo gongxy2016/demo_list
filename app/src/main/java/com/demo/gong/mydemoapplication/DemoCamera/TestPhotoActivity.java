@@ -1,11 +1,8 @@
 package com.demo.gong.mydemoapplication.DemoCamera;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -15,7 +12,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -30,13 +26,11 @@ import com.demo.gong.mydemoapplication.R;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import static android.graphics.Canvas.ALL_SAVE_FLAG;
-import static android.support.v4.content.FileProvider.getUriForFile;
 
 public class TestPhotoActivity extends AppCompatActivity {
 
@@ -57,15 +51,15 @@ public class TestPhotoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (view.getId() == R.id.btn_takephoto) {
                     Intent openCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    File filePath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath(),"2.jpg");
-
-                    if (filePath == null) {
-                        Toast.makeText(TestPhotoActivity.this,"无法打开相机",Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                    File filePath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath()+File.separator+"2.jpg");
 
                     if (!filePath.exists()) {
-                        filePath.mkdirs();
+                        try {
+                            filePath.createNewFile();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Toast.makeText(TestPhotoActivity.this,"打开相机失败，无法创建文件",Toast.LENGTH_SHORT).show();
+                        }
                         Log.i("TestPhotoActivity",filePath.getAbsolutePath());
                     }
 /*

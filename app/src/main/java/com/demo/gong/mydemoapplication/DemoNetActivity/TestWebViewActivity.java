@@ -22,6 +22,5 @@ public class TestWebViewActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("http://www.99vv2.com");
 
-
     }
 }

@@ -8,6 +8,12 @@
     tools:context="com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity">
 
     <Button
+        android:id="@+id/btn_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开网页"/>
+
+    <Button
         android:id="@+id/btn_send_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 package com.demo.gong.mydemoapplication.DemoNetActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,6 +24,7 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
 
     private Button btnSendRequest;
     private TextView tvResponse;
+    private Button btnWebview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +33,22 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
 
         btnSendRequest = (Button) findViewById(R.id.btn_send_request);
         tvResponse = (TextView) findViewById(R.id.tv_response);
+        btnWebview = (Button)findViewById(R.id.btn_webview);
+
         btnSendRequest.setOnClickListener(this);
+        btnWebview.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.btn_send_request) {
-//            sendRequestWithHttpURLConnection();
-            sendRequestWithOkHttp();
+        switch (view.getId()) {
+            case R.id.btn_send_request :
+                sendRequestWithOkHttp();
+                break;
+            case R.id.btn_webview :
+                startActivity(new Intent(this,TestWebViewActivity.class));
+                break;
         }
     }
 
