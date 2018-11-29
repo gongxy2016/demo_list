@@ -1,4 +1,4 @@
-package com.demo.gong.mydemoapplication.MyWidget;
+package com.demo.gong.mydemoapplication.DemoMyWidget;
 
 import android.content.Context;
 import android.graphics.Canvas;

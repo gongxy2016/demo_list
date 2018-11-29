@@ -1,4 +1,4 @@
-package com.demo.gong.mydemoapplication.MyWidget;
+package com.demo.gong.mydemoapplication.DemoMyWidget;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
