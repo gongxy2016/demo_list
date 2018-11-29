@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demo.gong.mydemoapplication.MyWidget.DemoPercentViewActivity">
+    android:orientation="vertical"
+    tools:context="com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity">
 
-    <com.demo.gong.mydemoapplication.MyWidget.MyPercentView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_show_percentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示图片"/>
+
+    <com.demo.gong.mydemoapplication.DemoMyWidget.MyPercentView
+        android:id="@+id/my_percent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
 </LinearLayout>
