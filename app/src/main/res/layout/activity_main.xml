@@ -30,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="sqlite数据库demo"/>
 
+    <Button
+        android:id="@+id/btn_coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CoordinatorLayout控件demo"/>
+
 </LinearLayout>

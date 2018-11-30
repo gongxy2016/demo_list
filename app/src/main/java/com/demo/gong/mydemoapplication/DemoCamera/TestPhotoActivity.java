@@ -164,6 +164,7 @@ public class TestPhotoActivity extends AppCompatActivity {
             Uri uri = Uri.fromFile(file);
             ivShowPhoto.setImageURI(uri);
 
+
         }
     }
 }
