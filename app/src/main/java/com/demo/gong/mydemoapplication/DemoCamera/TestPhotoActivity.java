@@ -123,7 +123,7 @@ public class TestPhotoActivity extends AppCompatActivity {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             ivShowPhoto.setImageBitmap(bitmap);
 */
-//            ivShowPhoto.setImageURI(uri);
+            ivShowPhoto.setImageURI(uri);
 
             Bitmap src = BitmapFactory.decodeFile(uri.getPath());
             int width = src.getWidth();
@@ -162,7 +162,7 @@ public class TestPhotoActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             Uri uri = Uri.fromFile(file);
-            ivShowPhoto.setImageURI(uri);
+//            ivShowPhoto.setImageURI(uri);
 
 
         }

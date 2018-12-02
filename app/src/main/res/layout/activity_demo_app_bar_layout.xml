@@ -38,13 +38,13 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <android.support.design.widget.FloatingActionButton
+    <!--android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="10dp"
         app:layout_anchorGravity="bottom|right|end"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher" /-->
 
 </android.support.design.widget.CoordinatorLayout>

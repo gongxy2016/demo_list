@@ -73,7 +73,7 @@ public class DemoAppBarLayoutActivity extends AppCompatActivity {
             private TextView tv;
             public MyViewHolder(View itemView) {
                 super(itemView);
-                tv = findViewById(R.id.tv_cooitem);
+                tv = itemView.findViewById(R.id.tv_cooitem);
             }
         }
     }

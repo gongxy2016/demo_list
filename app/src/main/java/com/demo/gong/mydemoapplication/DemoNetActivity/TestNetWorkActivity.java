@@ -13,10 +13,15 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -64,12 +69,60 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     showResponse(responseData);
-                    Log.i("TestNetWorkActivity", "TestNetWorkActivity.sendRequestWithOkHttp.showResponse:" + responseData);
+                    parseXMLWithPull(responseData);
+//                    Log.i("TestNetWorkActivity", "TestNetWorkActivity.sendRequestWithOkHttp.showResponse:" + responseData);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }.start();
+    }
+
+    private void parseXMLWithPull(String xmlData) {
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xmlPullParser = factory.newPullParser();
+            xmlPullParser.setInput(new StringReader(xmlData));
+            int eventType = xmlPullParser.getEventType();
+
+            String title = "";
+            String description = "";
+            String keywords = "";
+            String generator = "";
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String name = xmlPullParser.getName();
+                switch (eventType) {
+                    case XmlPullParser.START_DOCUMENT :
+                        Log.i("TestNetWorkActivity","start_document");
+                        break;
+                    //开始解析某个节点
+                    case XmlPullParser.START_TAG :
+                        Log.i("TestNetWorkActivity","XmlPullParser.START_TAG");
+                        if ("title".equals(name)) {
+                            title = xmlPullParser.nextText();
+                            Log.i("\nTestNetWorkActivity","title:"+title);
+                        }else if ("description".equals(name)) {
+                            description = xmlPullParser.nextText();
+                            Log.i("\nTestNetWorkActivity","description:"+description);
+                        }else if ("keywords".equals(name)) {
+                            keywords = xmlPullParser.nextText();
+                            Log.i("\nTestNetWorkActivity","keywords:"+keywords);
+                        }else if ("generator".equals(name)) {
+                            generator = xmlPullParser.nextText();
+                            Log.i("\nTestNetWorkActivity","generator:"+generator);
+                        }
+                        break;
+                    case XmlPullParser.END_TAG :
+                        Log.i("\nTestNetWorkActivity","end_tag");
+                        break;
+                    default:
+                        break;
+                }
+                eventType = xmlPullParser.next();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void sendRequestWithHttpURLConnection() {
