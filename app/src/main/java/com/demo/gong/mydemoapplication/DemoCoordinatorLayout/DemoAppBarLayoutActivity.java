@@ -33,7 +33,7 @@ public class DemoAppBarLayoutActivity extends AppCompatActivity {
 
     private void initShowData() {
         int i = 0;
-        while(i < 10) {
+        while(i < 50) {
             showData.add("1");
             i++;
         }
