@@ -37,7 +37,7 @@ public class DemoFragmentActivity extends AppCompatActivity {
 
         fragmentList = new ArrayList<>();
         fragmentList.add(new Fragment1());
-        fragmentList.add(new Fragment2());
+        fragmentList.add(new Fragment2ViewPagerInThis());
         fragmentList.add(new Fragment3());
 
         viewPager = (ViewPager)findViewById(R.id.viewpager);

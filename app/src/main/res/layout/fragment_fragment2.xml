@@ -1,13 +1,24 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.Fragment2">
+    android:orientation="vertical"
+    tools:context="com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.Fragment2ViewPagerInThis">
 
-    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp">
+
+    </android.support.v4.view.ViewPager>
+
     <TextView
+        android:id="@+id/tv_fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text="textview"/>
 
-</FrameLayout>
+</LinearLayout>
