@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.demo.gong.mydemoapplication.DemoCamera.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
+import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
 import com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity;
 import com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity;
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.TestDatabaseActivity;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnNet;
     private Button btnSqlite;
     private Button btnCoordinatorLayout;
+    private Button btnFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNet.setOnClickListener(this);
         btnSqlite.setOnClickListener(this);
         btnCoordinatorLayout.setOnClickListener(this);
+        btnFragment.setOnClickListener(this);
     }
 
     private void initView() {
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNet = (Button)findViewById(R.id.btn_net);
         btnSqlite = (Button)findViewById(R.id.btn_sqlite);
         btnCoordinatorLayout = (Button)findViewById(R.id.btn_coordinatorLayout);
+        btnFragment = (Button)findViewById(R.id.btn_fragment_demo);
     }
 
     @Override
@@ -63,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_coordinatorLayout :
                 startActivity(new Intent(this, DemoCoordinatorLayoutActivity.class));
+                break;
+            case R.id.btn_fragment_demo :
+                startActivity(new Intent(this, DemoFragmentActivity.class));
                 break;
         }
     }

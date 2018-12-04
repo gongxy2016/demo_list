@@ -19,6 +19,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support:support-v4:26.0.2'
     androidTestCompile('com.android.support:support-annotations:26.0.2') {
         force = true
     }
