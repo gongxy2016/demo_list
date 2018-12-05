@@ -64,7 +64,7 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
                 try {
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder()
-                            .url("http://www.99vv2.com")
+                            .url("http://www.baidu.com")
                             .build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
