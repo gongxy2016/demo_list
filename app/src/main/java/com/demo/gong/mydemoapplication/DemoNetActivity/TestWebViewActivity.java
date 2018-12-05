@@ -20,7 +20,7 @@ public class TestWebViewActivity extends AppCompatActivity {
         webView = (WebView)findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://www.99vv2.com");
+        webView.loadUrl("http://www.baidu.com");
 
     }
 }
