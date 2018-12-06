@@ -5,18 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.demo.gong.mydemoapplication.DemoCamera.TestPhotoActivity">
+    tools:context="com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity">
 
     <Button
         android:id="@+id/btn_takephoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="点击拍照"/>
 
     <ImageView
         android:id="@+id/iv_showphoto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
         android:background="@color/colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/btn_go_recoder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="进入录音界面"
+        android:layout_weight="1" />
 
 </LinearLayout>

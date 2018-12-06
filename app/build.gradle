@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 26
@@ -16,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.demo.gong.mydemoapplication.DemoSQliteDatabase.DemoGreenDAO.dao'
+        targetGenDir 'src/main/java'
+    }
 }
 
 dependencies {
@@ -32,4 +38,6 @@ dependencies {
     implementation 'com.squareup.okhttp:okhttp:2.0.0'
     implementation 'com.android.support:design:26.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'org.greenrobot:greendao:3.0.0'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
 }

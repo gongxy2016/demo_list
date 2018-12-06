@@ -3,7 +3,9 @@ package com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -52,26 +54,45 @@ public class Fragment2ViewPagerInThis extends Fragment {
         imageIds.add(R.mipmap.image0);
 
         vp.setAdapter(new Fragment2ViewPagerAdapter(new OnFragmet2VPChangeListener() {
-            @Override
+/*            @Override
             public void onItemChangeShowTextListener(int position) {
                 tv.setText(position+"");
-            }
+            }*/
 
             @Override
             public void onItemClickListener(int position) {
-                if (tv.isCursorVisible()){
+
+                if (tv.getVisibility() == View.VISIBLE){
                     tv.setVisibility(View.INVISIBLE);
                 }else {
                     tv.setVisibility(View.VISIBLE);
                 }
             }
         }));
+
         vp.setCurrentItem(0);
+
     }
 
     private void initView() {
         vp = (ViewPager)inflateView.findViewById(R.id.vp_fragment2);
         tv = (TextView) inflateView.findViewById(R.id.tv_fragment2);
+        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                tv.setText(position+"");
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private class Fragment2ViewPagerAdapter extends PagerAdapter {
@@ -99,7 +120,7 @@ public class Fragment2ViewPagerInThis extends Fragment {
 
             container.addView(imageView);
 
-            onFragmet2VPChangeListener.onItemChangeShowTextListener(position);
+//            onFragmet2VPChangeListener.onItemChangeShowTextListener(position);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.demo.gong.mydemoapplication.DemoCamera.TestPhotoActivity;
+import com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
 import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
 import com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity;

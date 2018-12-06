@@ -5,6 +5,6 @@ package com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout;
  */
 
 public interface OnFragmet2VPChangeListener {
-    void onItemChangeShowTextListener(int position);
+//    void onItemChangeShowTextListener(int position);
     void onItemClickListener(int position);
 }

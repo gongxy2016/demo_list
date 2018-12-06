@@ -1,4 +1,4 @@
-package com.demo.gong.mydemoapplication.DemoCamera;
+package com.demo.gong.mydemoapplication.DemoCameraAndRecoder;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,6 +37,7 @@ public class TestPhotoActivity extends AppCompatActivity {
     private Button btnTakePhoto;
     private ImageView ivShowPhoto;
     private Uri uri;
+    private Button btnGoRecoder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,7 @@ public class TestPhotoActivity extends AppCompatActivity {
 
         btnTakePhoto = (Button)findViewById(R.id.btn_takephoto);
         ivShowPhoto = (ImageView)findViewById(R.id.iv_showphoto);
-
+        btnGoRecoder = (Button)findViewById(R.id.btn_go_recoder);
         btnTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,19 +74,13 @@ public class TestPhotoActivity extends AppCompatActivity {
                         openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,uri);
                         startActivityForResult(openCameraIntent,0);
 
-
-                    /*
-                    if (android.os.Build.VERSION.SDK_INT < 24) {
-
-                    }else {
-                        ContentValues contentValues = new ContentValues(1);
-                        contentValues.put(MediaStore.Images.Media.DATA, filePath.getAbsolutePath());
-                        Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
-                        openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-                        startActivityForResult(openCameraIntent, 0);
-                    }*/
-
                 }
+            }
+        });
+        btnGoRecoder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestPhotoActivity.this,RecoderActivity.class));
             }
         });
     }
