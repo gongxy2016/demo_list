@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 
 import java.io.File;
@@ -30,10 +31,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import butterknife.BindView;
+
 import static android.graphics.Canvas.ALL_SAVE_FLAG;
 
-public class TestPhotoActivity extends AppCompatActivity {
+public class TestPhotoActivity extends BaseActivity {
 
+    @BindView(R.id.btn_takephoto)
     private Button btnTakePhoto;
     private ImageView ivShowPhoto;
     private Uri uri;

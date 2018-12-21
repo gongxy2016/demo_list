@@ -9,15 +9,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 
 import java.io.File;
 import java.io.IOException;
 
-public class RecoderActivity extends AppCompatActivity implements View.OnClickListener {
+import butterknife.BindView;
+import butterknife.OnClick;
 
-    private Button btnControl;
-    private RecyclerView recvRecorder;
+public class RecoderActivity extends BaseActivity {
+
+    @BindView(R.id.btn_recoder_control)
+    Button btnControl;
+    @BindView(R.id.recv_recoder)
+    RecyclerView recvRecorder;
+
+//    private Button btnControl;
+//    private RecyclerView recvRecorder;
     private boolean isStart = false;
     private MediaRecorder mr;
 
@@ -26,16 +35,27 @@ public class RecoderActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recoder);
 
-        initView();
-
-        btnControl.setOnClickListener(this);
     }
 
-    private void initView() {
-        btnControl = (Button) findViewById(R.id.btn_recoder_control);
-        recvRecorder = (RecyclerView) findViewById(R.id.recv_recoder);
+    @OnClick({R.id.btn_recoder_control})
+    public void onViewClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_recoder_control:
+                if (isStart == false) {
+                    isStart = true;
+                    btnControl.setText("停止录音");
+                    startRecord();
+                } else {
+                    isStart = false;
+                    btnControl.setText("开始录音");
+                    stopRecord();
+                }
+
+                break;
+        }
     }
 
+/*
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -53,6 +73,7 @@ public class RecoderActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+*/
 
     private void startRecord() {
         if (mr == null) {
