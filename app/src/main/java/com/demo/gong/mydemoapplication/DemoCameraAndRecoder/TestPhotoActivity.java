@@ -30,27 +30,32 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
+import butterknife.BindViews;
 
 import static android.graphics.Canvas.ALL_SAVE_FLAG;
 
 public class TestPhotoActivity extends BaseActivity {
 
-    @BindView(R.id.btn_takephoto)
-    private Button btnTakePhoto;
-    private ImageView ivShowPhoto;
-    private Uri uri;
-    private Button btnGoRecoder;
+    @BindViews({R.id.btn_takephoto,R.id.btn_go_recoder})
+    List<Button> buttonList;
+    @BindView(R.id.iv_showphoto)
+    ImageView ivShowPhoto;
+
+    Button btnTakePhoto;
+    Button btnGoRecoder;
+    Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_photo);
 
-        btnTakePhoto = (Button)findViewById(R.id.btn_takephoto);
-        ivShowPhoto = (ImageView)findViewById(R.id.iv_showphoto);
-        btnGoRecoder = (Button)findViewById(R.id.btn_go_recoder);
+        btnTakePhoto = buttonList.get(0);
+        btnGoRecoder = buttonList.get(1);
+
         btnTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
