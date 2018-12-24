@@ -11,7 +11,6 @@ import com.demo.gong.mydemoapplication.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 public class TestWebViewActivity extends BaseActivity {
 
     @BindView(R.id.webview)
