@@ -11,7 +11,11 @@ import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayo
 import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
 import com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity;
 import com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity;
+import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActivity;
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.TestDatabaseActivity;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -21,6 +25,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnSqlite;
     private Button btnCoordinatorLayout;
     private Button btnFragment;
+
+    @BindView(R.id.btn_recy_image_flow_demo)
+    Button btnRecyImageFlow;
+
+
+    @OnClick(R.id.btn_recy_image_flow_demo)
+    public void goNextActivity() {
+        startActivity(new Intent(MainActivity.this, RecyclerViewFlowActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

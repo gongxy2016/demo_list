@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.demo.gong.mydemoapplication.R;
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
 import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedReader;
@@ -66,7 +67,8 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
                     Request request = new Request.Builder()
                             .url("http://www.baidu.com")
                             .build();
-                    Response response = client.newCall(request).execute();
+                    Call call = client.newCall(request);
+                    Response response = call.execute();
                     String responseData = response.body().string();
                     showResponse(responseData);
                     parseXMLWithPull(responseData);

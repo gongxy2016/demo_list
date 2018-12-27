@@ -41,4 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="fragment demo"/>
+
+    <Button
+        android:id="@+id/btn_recy_image_flow_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView瀑布流"/>
 </LinearLayout>

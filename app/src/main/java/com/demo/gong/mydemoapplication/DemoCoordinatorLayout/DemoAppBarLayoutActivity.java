@@ -34,7 +34,7 @@ public class DemoAppBarLayoutActivity extends AppCompatActivity {
     private void initShowData() {
         int i = 0;
         while(i < 50) {
-            showData.add("1");
+            showData.add("image1");
             i++;
         }
     }

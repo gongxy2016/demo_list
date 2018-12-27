@@ -54,7 +54,7 @@ public class TestPhotoActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.btn_takephoto:
                 Intent openCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                File filePath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath() + File.separator + "2.jpg");
+                File filePath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath() + File.separator + "image2mage2.jpg");
 
                 if (!filePath.exists()) {
                     try {
@@ -89,7 +89,7 @@ public class TestPhotoActivity extends BaseActivity {
     }
 
     private void takeCameraFor7() {
-        File tempFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath(), "2.jpg");
+        File tempFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath(), "image2.jpg2.jpg");
         Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
         Uri fileUri = getUriForFile(TestPhotoActivity.this, tempFile);

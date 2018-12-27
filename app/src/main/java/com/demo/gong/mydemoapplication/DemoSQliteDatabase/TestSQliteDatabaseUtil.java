@@ -10,7 +10,7 @@ public class TestSQliteDatabaseUtil {
 
 
     public static void insert(SQLiteDatabase db) {
-        db.execSQL("insert into my_test(name,age,num) values ('gxy',18,'1')");
+        db.execSQL("insert into my_test(name,age,num) values ('gxy',18,image1)");
     }
 
     public static void update(SQLiteDatabase db) {

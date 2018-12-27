@@ -47,7 +47,9 @@
         <activity android:name=".DemoFragmentAndTabLayout.DemoFragmentActivity" />
         <activity android:name=".DemoCameraAndRecoder.RecoderActivity" />
         <activity android:name=".DemoSQliteDatabase.DemoGreenDAO.GreenDaoActivity" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".DemoEventTransmit.EventTransmitActivity" />
+        <activity android:name=".DemoRecyclerViewFlow.RecyclerViewFlowActivity"></activity>
     </application>
 
 </manifest>
