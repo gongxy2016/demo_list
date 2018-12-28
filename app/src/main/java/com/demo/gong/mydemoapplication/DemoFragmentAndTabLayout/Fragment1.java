@@ -10,12 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.demo.gong.mydemoapplication.BaseFragment;
 import com.demo.gong.mydemoapplication.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment1 extends Fragment {
+public class Fragment1 extends BaseFragment {
 
     public Fragment1() {
         // Required empty public constructor

@@ -8,15 +8,21 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoFragmentActivity extends AppCompatActivity {
+import butterknife.BindView;
 
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+public class DemoFragmentActivity extends BaseActivity {
+
+    @BindView(R.id.tablayout)
+    TabLayout tabLayout;
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
+
     private List<Fragment> fragmentList;
     private String[] title = {"fragment1","fragment2","fragment3"};
 
@@ -29,7 +35,6 @@ public class DemoFragmentActivity extends AppCompatActivity {
     }
 
     private void init() {
-        tabLayout = (TabLayout)findViewById(R.id.tablayout);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.addTab(tabLayout.newTab().setText(title[0]));
         tabLayout.addTab(tabLayout.newTab().setText(title[1]));
@@ -40,7 +45,6 @@ public class DemoFragmentActivity extends AppCompatActivity {
         fragmentList.add(new Fragment2ViewPagerInThis());
         fragmentList.add(new Fragment3());
 
-        viewPager = (ViewPager)findViewById(R.id.viewpager);
         //viewpager适配器
         MyViewPagerAdapter mViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragmentList, title);
         viewPager.setAdapter(mViewPagerAdapter);

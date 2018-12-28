@@ -12,6 +12,9 @@ import com.demo.gong.mydemoapplication.R;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by TS_02 on 2018/12/27.
  */
@@ -47,16 +50,17 @@ public class RecyclerViewFlowAdapter extends RecyclerView.Adapter {
         return showData.size();
     }
 
-    private class RecyclerViewFlowViewHolder extends RecyclerView.ViewHolder {
+    class RecyclerViewFlowViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView iv;
-        private TextView tv;
+        @BindView(R.id.iv_image_flow_show)
+        ImageView iv;
+        @BindView(R.id.tv_image_flow_name)
+        TextView tv;
 
         public RecyclerViewFlowViewHolder(View itemView) {
             super(itemView);
 
-            iv = itemView.findViewById(R.id.iv_image_flow_show);
-            tv = itemView.findViewById(R.id.tv_image_flow_name);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

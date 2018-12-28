@@ -7,13 +7,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.DemoGreenDAO.GreenDaoActivity;
 import com.demo.gong.mydemoapplication.R;
 
-public class TestDatabaseActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class TestDatabaseActivity extends BaseActivity {
+
+    @BindView(R.id.btn_go_greendaodemo)
+    Button btnGoGreenDao;
 
     private SQLiteDatabase sqLiteDatabase;
-    private Button btnGoGreenDao;
+
+    @OnClick(R.id.btn_go_greendaodemo)
+    public void onViewClick(View view) {
+        startActivity(new Intent(TestDatabaseActivity.this, GreenDaoActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +37,5 @@ public class TestDatabaseActivity extends AppCompatActivity {
             TestSQliteDatabaseUtil.update(sqLiteDatabase);
         }
 
-        btnGoGreenDao = (Button)findViewById(R.id.btn_go_greendaodemo);
-        btnGoGreenDao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(TestDatabaseActivity.this, GreenDaoActivity.class));
-            }
-        });
     }
 }

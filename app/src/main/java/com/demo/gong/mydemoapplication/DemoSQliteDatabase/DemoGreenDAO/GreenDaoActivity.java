@@ -15,6 +15,7 @@ public class GreenDaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_dao);
+
         MyApplication mApplication = MyApplication.getInstance();
         DaoSession daoSession = mApplication.getDaoSession();
         sqLiteUtils = SQLiteUtils.getInstance(daoSession.getPersonBeanDao(),mApplication.getDaoSession());

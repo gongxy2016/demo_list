@@ -9,14 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoAppBarLayoutActivity extends AppCompatActivity {
+import butterknife.BindView;
 
-    private RecyclerView recv_appbar;
+public class DemoAppBarLayoutActivity extends BaseActivity {
+
+    @BindView(R.id.recv_appbar)
+    RecyclerView recv_appbar;
+
     private List<String> showData = new ArrayList<>();
 
     @Override
@@ -24,7 +29,6 @@ public class DemoAppBarLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_app_bar_layout);
 
-        recv_appbar = (RecyclerView)findViewById(R.id.recv_appbar);
         recv_appbar.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         initShowData();
         MyRecvAdapter adapter = new MyRecvAdapter(showData);

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
@@ -26,28 +27,20 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class TestNetWorkActivity extends AppCompatActivity implements View.OnClickListener {
+import butterknife.BindView;
+import butterknife.OnClick;
 
-    private Button btnSendRequest;
-    private TextView tvResponse;
-    private Button btnWebview;
+public class TestNetWorkActivity extends BaseActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_net_work);
+    @BindView(R.id.btn_send_request)
+    Button btnSendRequest;
+    @BindView(R.id.tv_response)
+    TextView tvResponse;
+    @BindView(R.id.btn_webview)
+    Button btnWebview;
 
-        btnSendRequest = (Button) findViewById(R.id.btn_send_request);
-        tvResponse = (TextView) findViewById(R.id.tv_response);
-        btnWebview = (Button)findViewById(R.id.btn_webview);
-
-        btnSendRequest.setOnClickListener(this);
-        btnWebview.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-
+    @OnClick({R.id.btn_send_request,R.id.btn_webview})
+    public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_send_request :
                 sendRequestWithOkHttp();
@@ -56,6 +49,13 @@ public class TestNetWorkActivity extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(this,TestWebViewActivity.class));
                 break;
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test_net_work);
+
     }
 
     private void sendRequestWithOkHttp() {

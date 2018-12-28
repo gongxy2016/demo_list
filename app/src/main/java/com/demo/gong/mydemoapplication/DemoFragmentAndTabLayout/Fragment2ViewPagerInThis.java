@@ -16,21 +16,30 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.demo.gong.mydemoapplication.BaseFragment;
 import com.demo.gong.mydemoapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment2ViewPagerInThis extends Fragment {
+public class Fragment2ViewPagerInThis extends BaseFragment {
+
+    @BindView(R.id.vp_fragment2)
+    ViewPager vp;
+    @BindView(R.id.tv_fragment2)
+    TextView tv;
 
     private Context context;
-    private ViewPager vp;
-    private TextView tv;
     private View inflateView;
     private List<Integer> imageIds;
+//    private Unbinder unbinder;
 
     @Override
     public void onAttach(Context context) {
@@ -39,9 +48,16 @@ public class Fragment2ViewPagerInThis extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        inflateView = inflater.inflate(R.layout.fragment_fragment2, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+//            inflateView = inflater.inflate(R.layout.fragment_fragment2, container, false);
+
+        inflateView = setInflaterView(inflater,container,R.layout.fragment_fragment2);
+
+        //butterknife在Activity中不需要做解绑操作，在Fragment 中必须在onDestroyView()中做解绑操作。
+        //返回一个Unbinder值（进行解绑），注意这里的this不能使用getActivity()
+//        unbinder = ButterKnife.bind(this, inflateView);
+
         initView();
         addData();
         return inflateView;
@@ -75,8 +91,6 @@ public class Fragment2ViewPagerInThis extends Fragment {
     }
 
     private void initView() {
-        vp = (ViewPager)inflateView.findViewById(R.id.vp_fragment2);
-        tv = (TextView) inflateView.findViewById(R.id.tv_fragment2);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -135,5 +149,13 @@ public class Fragment2ViewPagerInThis extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View)object);
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        //butterknife解绑
+//        unbinder.unbind();
     }
 }

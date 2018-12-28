@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
@@ -15,6 +16,7 @@ import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActi
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.TestDatabaseActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -29,9 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.btn_recy_image_flow_demo)
     Button btnRecyImageFlow;
 
-
     @OnClick(R.id.btn_recy_image_flow_demo)
     public void goNextActivity() {
+        Toast.makeText(this, "点击跳转--btn_recy_image_flow_demo", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(MainActivity.this, RecyclerViewFlowActivity.class));
     }
 
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         initView();
 

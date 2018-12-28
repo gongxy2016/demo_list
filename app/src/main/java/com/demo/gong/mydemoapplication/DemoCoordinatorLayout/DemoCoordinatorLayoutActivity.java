@@ -8,30 +8,42 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.demo.gong.mydemoapplication.BaseActivity;
 import com.demo.gong.mydemoapplication.R;
 
-public class DemoCoordinatorLayoutActivity extends AppCompatActivity implements View.OnTouchListener,View.OnClickListener{
+import butterknife.BindView;
+import butterknife.OnClick;
+import butterknife.OnTouch;
+
+public class DemoCoordinatorLayoutActivity extends BaseActivity {
+
+    @BindView(R.id.btn_move)
+    Button btnMove;
+    @BindView(R.id.btn_next)
+    Button btnNext;
+    @BindView(R.id.tv_show)
+    TextView tvShow;
 
     private int count = 0;
-    private Button btnMove;
-    private TextView tvShow;
-    private Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_coordinator_layout);
 
-        btnMove = (Button)findViewById(R.id.btn_move);
-        tvShow = (TextView)findViewById(R.id.tv_show);
-        btnNext = (Button)findViewById(R.id.btn_next);
-
-        btnMove.setOnTouchListener(this);
-        btnNext.setOnClickListener(this);
     }
 
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
+    @OnClick({R.id.btn_next})
+    public void onViewClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_next :
+                startActivity(new Intent(this,DemoAppBarLayoutActivity.class));
+                break;
+        }
+    }
+
+    @OnTouch(R.id.btn_move)
+    public boolean onViewTouch(View v, MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_MOVE) {
             v.setX(event.getRawX()-v.getWidth()/2);
             v.setY(event.getRawY()-v.getHeight()/2);
@@ -63,12 +75,5 @@ public class DemoCoordinatorLayoutActivity extends AppCompatActivity implements 
             }
         }
         return false;
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.btn_next) {
-            startActivity(new Intent(this,DemoAppBarLayoutActivity.class));
-        }
     }
 }
