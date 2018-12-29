@@ -49,7 +49,9 @@
         <activity android:name=".DemoSQliteDatabase.DemoGreenDAO.GreenDaoActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".DemoEventTransmit.EventTransmitActivity" />
-        <activity android:name=".DemoRecyclerViewFlow.RecyclerViewFlowActivity"></activity>
+        <activity android:name=".DemoRecyclerViewFlow.RecyclerViewFlowActivity" />
+        <activity android:name=".DemoAnimation.FrameAnimationActivity" />
+        <activity android:name=".DemoAnimation.DemoAnimationActivity"></activity>
     </application>
 
 </manifest>

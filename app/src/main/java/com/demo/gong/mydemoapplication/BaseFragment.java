@@ -35,10 +35,10 @@ public class BaseFragment extends Fragment {
         return inflaterView;
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        //butterknife解绑
-        unbinder.unbind();
+    //butterknife解绑,供子类在onDestoryView中调用
+    public void unbindbutterknife() {
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 }

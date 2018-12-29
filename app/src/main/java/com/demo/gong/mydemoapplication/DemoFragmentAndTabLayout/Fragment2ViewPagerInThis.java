@@ -39,7 +39,6 @@ public class Fragment2ViewPagerInThis extends BaseFragment {
     private Context context;
     private View inflateView;
     private List<Integer> imageIds;
-//    private Unbinder unbinder;
 
     @Override
     public void onAttach(Context context) {
@@ -152,10 +151,9 @@ public class Fragment2ViewPagerInThis extends BaseFragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
 
-        //butterknife解绑
-//        unbinder.unbind();
+        unbindbutterknife();
     }
 }
