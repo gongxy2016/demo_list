@@ -16,10 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <!-- android:label属性用于指定Toolbar中显示的文字内容 -->
+        <activity
+            android:name=".MainActivity"
+            android:label="Toolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,10 +51,9 @@
         <activity android:name=".DemoCameraAndRecoder.RecoderActivity" />
         <activity android:name=".DemoSQliteDatabase.DemoGreenDAO.GreenDaoActivity" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".DemoEventTransmit.EventTransmitActivity" />
         <activity android:name=".DemoRecyclerViewFlow.RecyclerViewFlowActivity" />
         <activity android:name=".DemoAnimation.FrameAnimationActivity" />
-        <activity android:name=".DemoAnimation.DemoAnimationActivity"></activity>
+        <activity android:name=".DemoAnimation.DemoAnimationActivity" />
     </application>
 
 </manifest>
