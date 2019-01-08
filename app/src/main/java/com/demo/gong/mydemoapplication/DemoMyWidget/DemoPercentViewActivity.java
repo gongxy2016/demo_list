@@ -1,6 +1,5 @@
 package com.demo.gong.mydemoapplication.DemoMyWidget;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +18,7 @@ public class DemoPercentViewActivity extends BaseActivity {
     MyPercentView myPercentView;
 
     @OnClick(R.id.btn_show_percentview)
-    public void onViewClick(View view) {
+    public void onViewClick() {
         if (myPercentView.getVisibility() == View.VISIBLE) {
             myPercentView.setVisibility(View.GONE);
             btnShowView.setText("显示图片");

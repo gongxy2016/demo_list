@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,6 +47,12 @@ public class TestPhotoActivity extends BaseActivity {
     Button btnTakePhoto;
     Button btnGoRecoder;
     Uri uri;
+
+    @OnClick(R.id.iv_showphoto)
+    public void onViewClick() {
+        //todo 点击更换图片
+
+    }
 
     @OnClick({R.id.btn_takephoto, R.id.btn_go_recoder})
     public void onViewClick(View view) {
