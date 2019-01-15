@@ -13,6 +13,7 @@ import com.demo.gong.mydemoapplication.DemoAnimation.DemoAnimationActivity;
 import com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
 import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
+import com.demo.gong.mydemoapplication.DemoMyCamera.MyCareraActivity;
 import com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity;
 import com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity;
 import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActivity;
@@ -29,11 +30,11 @@ public class MainActivity extends BaseActivity {
     Toolbar toolbar;
 
     @BindViews({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
-            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation})
+            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera})
     List<Button> btnList;
 
     @OnClick({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
-            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation})
+            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera :
@@ -60,6 +61,9 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_animation :
                 startActivity(new Intent(MainActivity.this, DemoAnimationActivity.class));
                 break;
+            case R.id.btn_my_camera :
+                startActivity(new Intent(MainActivity.this, MyCareraActivity.class));
+                break;
         }
     }
 
@@ -70,7 +74,7 @@ public class MainActivity extends BaseActivity {
 
         //设置Toolbar的外观和功能和ActionBar一致
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("好嗨哟！感觉人生已经到达了高潮");
+        getSupportActionBar().setTitle("好嗨哟！感觉人生已经到达了巅峰");
     }
 
     //初始化Toorbar右侧的图标

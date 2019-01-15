@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
@@ -23,6 +24,7 @@
             android:label="Toolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -54,6 +56,11 @@
         <activity android:name=".DemoRecyclerViewFlow.RecyclerViewFlowActivity" />
         <activity android:name=".DemoAnimation.FrameAnimationActivity" />
         <activity android:name=".DemoAnimation.DemoAnimationActivity" />
+        <activity
+            android:name=".DemoMyCamera.MyCareraActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>

@@ -61,4 +61,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Animation动画"/>
+
+    <Button
+        android:id="@+id/btn_my_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义相机(未完成)"/>
 </LinearLayout>
