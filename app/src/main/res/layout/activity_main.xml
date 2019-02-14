@@ -67,4 +67,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自定义相机(未完成)"/>
+
+    <Button
+        android:id="@+id/btn_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成二维码"/>
 </LinearLayout>

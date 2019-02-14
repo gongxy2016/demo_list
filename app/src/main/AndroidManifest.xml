@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
@@ -58,9 +60,8 @@
         <activity android:name=".DemoAnimation.DemoAnimationActivity" />
         <activity
             android:name=".DemoMyCamera.MyCareraActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".DemoQRCode.QRCodeActivity"></activity>
     </application>
 
 </manifest>

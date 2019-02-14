@@ -43,4 +43,6 @@ dependencies {
     compile 'org.greenrobot:greendao-generator:3.0.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'com.google.zxing:core:3.3.3'//二维码
 }
