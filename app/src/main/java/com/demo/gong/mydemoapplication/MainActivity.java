@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.demo.gong.mydemoapplication.DemoAnimation.DemoAnimationActivity;
+import com.demo.gong.mydemoapplication.DemoBaiduMap.BaiduMapActivity;
 import com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
 import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
@@ -31,11 +32,13 @@ public class MainActivity extends BaseActivity {
     Toolbar toolbar;
 
     @BindViews({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
-            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,R.id.btn_qrcode})
+            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
+            R.id.btn_qrcode,R.id.btn_baidumap})
     List<Button> btnList;
 
     @OnClick({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
-            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,R.id.btn_qrcode})
+            R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
+            R.id.btn_qrcode,R.id.btn_baidumap})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera :
@@ -67,6 +70,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_qrcode :
                 startActivity(new Intent(MainActivity.this, QRCodeActivity.class));
+                break;
+            case R.id.btn_baidumap :
+                startActivity(new Intent(MainActivity.this, BaiduMapActivity.class));
                 break;
         }
     }

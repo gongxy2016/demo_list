@@ -15,62 +15,83 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <Button
-        android:id="@+id/btn_camera"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="调用相机demo"/>
-    <Button
-        android:id="@+id/btn_my_widget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义控件demo"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_net"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="请求网络demo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_sqlite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sqlite数据库demo"/>
 
-    <Button
-        android:id="@+id/btn_coordinatorLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CoordinatorLayout控件demo"/>
 
-    <Button
-        android:id="@+id/btn_fragment_demo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="fragment demo"/>
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="调用相机demo" />
 
-    <Button
-        android:id="@+id/btn_recy_image_flow_demo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RecyclerView瀑布流"/>
+        <Button
+            android:id="@+id/btn_my_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义控件demo" />
 
-    <Button
-        android:id="@+id/btn_animation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Animation动画"/>
+        <Button
+            android:id="@+id/btn_net"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请求网络demo" />
 
-    <Button
-        android:id="@+id/btn_my_camera"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义相机(未完成)"/>
+        <Button
+            android:id="@+id/btn_sqlite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sqlite数据库demo" />
 
-    <Button
-        android:id="@+id/btn_qrcode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="生成二维码"/>
+        <Button
+            android:id="@+id/btn_coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout控件demo" />
+
+        <Button
+            android:id="@+id/btn_fragment_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fragment demo" />
+
+        <Button
+            android:id="@+id/btn_recy_image_flow_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView瀑布流" />
+
+        <Button
+            android:id="@+id/btn_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animation动画" />
+
+        <Button
+            android:id="@+id/btn_my_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义相机(未完成)" />
+
+        <Button
+            android:id="@+id/btn_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成二维码" />
+
+        <Button
+            android:id="@+id/btn_baidumap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="百度地图示例" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

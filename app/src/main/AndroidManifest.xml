@@ -10,6 +10,22 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    //获取设备网络状态，禁用后无法获取网络状态
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    //读取设备硬件信息，统计数据
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    //读取系统信息，包含系统版本等信息，用作统计
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    //获取设备的网络状态，鉴权所需网络代理
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    //这个权限用于进行网络定位
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    //这个权限用于访问GPS定位
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    //获取统计数据
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    //程序在手机屏幕关闭后后台进程仍然运行
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".MyApplication"
@@ -19,6 +35,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NdtmDVVAgkpxnOK3pQmipLzc2GGNfZk7" />
 
         <!-- android:label属性用于指定Toolbar中显示的文字内容 -->
         <activity
@@ -60,8 +79,15 @@
         <activity android:name=".DemoAnimation.DemoAnimationActivity" />
         <activity
             android:name=".DemoMyCamera.MyCareraActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".DemoQRCode.QRCodeActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".DemoQRCode.QRCodeActivity" />
+        <activity android:name=".DemoBaiduMap.BaiduMapActivity" />
+
+        <service
+            android:name=".DemoBaiduMap.BaoduMapService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"></service>
     </application>
 
 </manifest>

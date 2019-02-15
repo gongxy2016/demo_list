@@ -23,6 +23,11 @@ android {
         daoPackage 'com.demo.gong.mydemoapplication.DemoSQliteDatabase.DemoGreenDAO.dao'
         targetGenDir 'src/main/java'
     }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -43,6 +48,7 @@ dependencies {
     compile 'org.greenrobot:greendao-generator:3.0.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-
-    compile 'com.google.zxing:core:3.3.3'//二维码
+    compile 'com.google.zxing:core:3.3.3'
+    //二维码
+    implementation files('libs/BaiduLBS_Android.jar')
 }
