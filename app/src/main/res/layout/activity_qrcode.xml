@@ -7,9 +7,16 @@
     android:orientation="vertical"
     tools:context="com.demo.gong.mydemoapplication.DemoQRCode.QRCodeActivity">
 
-    <ImageView
-        android:id="@+id/iv_qrcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_create_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成二维码"/>
+
+    <Button
+        android:id="@+id/btn_scan_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="扫描二维码"/>
 
 </LinearLayout>
