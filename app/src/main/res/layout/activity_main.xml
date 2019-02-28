@@ -91,6 +91,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="百度地图示例" />
+
+            <Button
+                android:id="@+id/btn_floating_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="悬浮按钮" />
+
         </LinearLayout>
     </ScrollView>
 
