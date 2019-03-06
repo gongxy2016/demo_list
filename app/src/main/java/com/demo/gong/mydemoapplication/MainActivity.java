@@ -3,6 +3,7 @@ package com.demo.gong.mydemoapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -89,6 +90,9 @@ public class MainActivity extends BaseActivity {
         //设置Toolbar的外观和功能和ActionBar一致
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("好嗨哟！感觉人生已经到达了巅峰");
+
+        // 格式化后的数字   0 代表前面补充0,   4 代表长度为4,    d 代表参数为正数型
+        Log.i("TEST","格式化后的数字 : "+String.format("%022d",1));
     }
 
     //初始化Toorbar右侧的图标
