@@ -98,6 +98,12 @@
                 android:layout_height="wrap_content"
                 android:text="悬浮按钮" />
 
+            <Button
+                android:id="@+id/btn_repeat_choose_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下拉多选框" />
+
         </LinearLayout>
     </ScrollView>
 
