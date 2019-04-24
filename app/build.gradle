@@ -51,4 +51,5 @@ dependencies {
     //二维码
     implementation files('libs/BaiduLBS_Android.jar')
     implementation 'com.github.yuzhiqiang1993:zxing:2.2.5'
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
 }
