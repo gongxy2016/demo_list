@@ -23,6 +23,7 @@ import com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity;
 import com.demo.gong.mydemoapplication.DemoQRCode.QRCodeActivity;
 import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActivity;
 import com.demo.gong.mydemoapplication.DemoRepeatChooseBtn.RepeatChooseBtnActivity;
+import com.demo.gong.mydemoapplication.DemoRxjava.RxjavaPractiseActivity;
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.TestDatabaseActivity;
 import java.util.List;
 
@@ -38,13 +39,13 @@ public class MainActivity extends BaseActivity {
     @BindViews({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise})
     List<Button> btnList;
 
     @OnClick({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera :
@@ -88,6 +89,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_jsbridge_button:
                 startActivity(new Intent(MainActivity.this, JsBridgeDemoActivity.class));
+                break;
+            case R.id.btn_rxandroid_practise :
+                startActivity(new Intent(MainActivity.this,RxjavaPractiseActivity.class));
                 break;
         }
     }

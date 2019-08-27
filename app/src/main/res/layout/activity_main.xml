@@ -110,6 +110,12 @@
                 android:layout_height="wrap_content"
                 android:text="js bridge" />
 
+            <Button
+                android:id="@+id/btn_rxandroid_practise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="rxandroid" />
+
         </LinearLayout>
 
     </ScrollView>
