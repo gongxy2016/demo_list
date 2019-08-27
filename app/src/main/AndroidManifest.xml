@@ -97,7 +97,8 @@
         <activity android:name=".DemoQRCode.CreateQRCodeActivity" />
         <activity android:name=".DemoFloatingActionButton.FloatingActionButtonActivity" />
         <activity android:name=".DemoRepeatChooseBtn.RepeatChooseBtnActivity" />
-        <activity android:name=".DemoJsBridge.JsBridgeDemoActivity"></activity>
+        <activity android:name=".DemoJsBridge.JsBridgeDemoActivity" />
+        <activity android:name=".DemoRxjava.RxjavaPractiseActivity"></activity>
     </application>
 
 </manifest>
