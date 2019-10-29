@@ -116,6 +116,11 @@
                 android:layout_height="wrap_content"
                 android:text="rxandroid" />
 
+            <Button
+                android:id="@+id/btn_et_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="解决et内容靠右时，光标显示在hint左边"/>
         </LinearLayout>
 
     </ScrollView>

@@ -1,7 +1,6 @@
 package com.demo.gong.mydemoapplication.DemoRxjava;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,14 +13,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-//import io.reactivex.Observable;
-//import io.reactivex.ObservableEmitter;
-//import io.reactivex.ObservableOnSubscribe;
-//import io.reactivex.Observer;
-//import io.reactivex.disposables.Disposable;
 import io.reactivex.*;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
 
 public class RxjavaPractiseActivity extends BaseActivity {
 

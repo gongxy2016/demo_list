@@ -14,6 +14,7 @@ import com.demo.gong.mydemoapplication.DemoAnimation.DemoAnimationActivity;
 import com.demo.gong.mydemoapplication.DemoBaiduMap.BaiduMapActivity;
 import com.demo.gong.mydemoapplication.DemoCameraAndRecoder.TestPhotoActivity;
 import com.demo.gong.mydemoapplication.DemoCoordinatorLayout.DemoCoordinatorLayoutActivity;
+import com.demo.gong.mydemoapplication.DemoEtTest.EtTestActivity;
 import com.demo.gong.mydemoapplication.DemoFloatingActionButton.FloatingActionButtonActivity;
 import com.demo.gong.mydemoapplication.DemoFragmentAndTabLayout.DemoFragmentActivity;
 import com.demo.gong.mydemoapplication.DemoJsBridge.JsBridgeDemoActivity;
@@ -25,6 +26,7 @@ import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActi
 import com.demo.gong.mydemoapplication.DemoRepeatChooseBtn.RepeatChooseBtnActivity;
 import com.demo.gong.mydemoapplication.DemoRxjava.RxjavaPractiseActivity;
 import com.demo.gong.mydemoapplication.DemoSQliteDatabase.TestDatabaseActivity;
+
 import java.util.List;
 
 import butterknife.BindView;
@@ -39,13 +41,13 @@ public class MainActivity extends BaseActivity {
     @BindViews({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test})
     List<Button> btnList;
 
     @OnClick({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera :
@@ -92,6 +94,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_rxandroid_practise :
                 startActivity(new Intent(MainActivity.this,RxjavaPractiseActivity.class));
+                break;
+            case R.id.btn_et_test :
+                startActivity(new Intent(MainActivity.this,EtTestActivity.class));
                 break;
         }
     }
