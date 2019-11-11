@@ -21,6 +21,7 @@ import com.demo.gong.mydemoapplication.DemoJsBridge.JsBridgeDemoActivity;
 import com.demo.gong.mydemoapplication.DemoMyCamera.MyCareraActivity;
 import com.demo.gong.mydemoapplication.DemoMyWidget.DemoPercentViewActivity;
 import com.demo.gong.mydemoapplication.DemoNetActivity.TestNetWorkActivity;
+import com.demo.gong.mydemoapplication.DemoPlayMusic.PlayMusicActivity;
 import com.demo.gong.mydemoapplication.DemoQRCode.QRCodeActivity;
 import com.demo.gong.mydemoapplication.DemoRecyclerViewFlow.RecyclerViewFlowActivity;
 import com.demo.gong.mydemoapplication.DemoRepeatChooseBtn.RepeatChooseBtnActivity;
@@ -41,13 +42,13 @@ public class MainActivity extends BaseActivity {
     @BindViews({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test,R.id.btn_mediaplayer})
     List<Button> btnList;
 
     @OnClick({R.id.btn_camera,R.id.btn_my_widget,R.id.btn_net,R.id.btn_sqlite,R.id.btn_coordinatorLayout,
             R.id.btn_fragment_demo,R.id.btn_recy_image_flow_demo,R.id.btn_animation,R.id.btn_my_camera,
             R.id.btn_qrcode,R.id.btn_baidumap,R.id.btn_floating_action_button,R.id.btn_repeat_choose_button,
-            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test})
+            R.id.btn_jsbridge_button,R.id.btn_rxandroid_practise,R.id.btn_et_test,R.id.btn_mediaplayer})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera :
@@ -98,6 +99,9 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_et_test :
                 startActivity(new Intent(MainActivity.this,EtTestActivity.class));
                 break;
+            case R.id.btn_mediaplayer :
+                startActivity(new Intent(MainActivity.this,PlayMusicActivity.class));
+            break;
         }
     }
 

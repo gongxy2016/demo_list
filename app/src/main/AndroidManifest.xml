@@ -100,7 +100,8 @@
         <activity android:name=".DemoJsBridge.JsBridgeDemoActivity" />
         <activity android:name=".DemoRxjava.RxjavaPractiseActivity" />
         <activity android:name=".DemoVideoAndTakePhoto.VideoAndTakePhotoActivity" />
-        <activity android:name=".DemoEtTest.EtTestActivity"></activity>
+        <activity android:name=".DemoEtTest.EtTestActivity" />
+        <activity android:name=".DemoPlayMusic.PlayMusicActivity"></activity>
     </application>
 
 </manifest>
