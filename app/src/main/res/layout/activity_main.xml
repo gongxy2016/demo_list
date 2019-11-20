@@ -128,6 +128,12 @@
                 android:layout_height="wrap_content"
                 android:text="音乐播放器,获取缓冲状态"/>
 
+            <Button
+                android:id="@+id/btn_motion_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="滑动冲突处理"/>
+
         </LinearLayout>
 
     </ScrollView>

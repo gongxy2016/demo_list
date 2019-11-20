@@ -48,10 +48,10 @@ dependencies {
     compile 'org.greenrobot:greendao-generator:3.0.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    //二维码
     implementation files('libs/BaiduLBS_Android.jar')
     implementation 'com.github.yuzhiqiang1993:zxing:2.2.5'
     implementation 'com.github.lzyzsd:jsbridge:1.0.4'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }

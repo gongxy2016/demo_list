@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoMotionEvent.MotionEventActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.demo.gong.mydemoapplication.DemoMotionEvent.LinearLayoutEventTest
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="1" />
+
+            <ListView
+                android:id="@+id/listView_MotionEventActivity"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+            </ListView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="1" />
+        </com.demo.gong.mydemoapplication.DemoMotionEvent.LinearLayoutEventTest>
+
+    </ScrollView>
+
+</LinearLayout>

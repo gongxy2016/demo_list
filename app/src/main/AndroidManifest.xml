@@ -15,22 +15,26 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    //获取设备网络状态，禁用后无法获取网络状态
+    <!-- 获取设备网络状态，禁用后无法获取网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    //读取设备硬件信息，统计数据
+    <!-- 读取设备硬件信息，统计数据 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    //读取系统信息，包含系统版本等信息，用作统计
+    <!-- 读取系统信息，包含系统版本等信息，用作统计 -->
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    //获取设备的网络状态，鉴权所需网络代理
+    <!-- 获取设备的网络状态，鉴权所需网络代理 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    //这个权限用于进行网络定位
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    //这个权限用于访问GPS定位
+    <!-- 这个权限用于进行网络定位 -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    //获取统计数据
+    <!-- 获取统计数据 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    //程序在手机屏幕关闭后后台进程仍然运行
+    <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 修改wifi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
         android:name=".MyApplication"
@@ -99,9 +103,22 @@
         <activity android:name=".DemoRepeatChooseBtn.RepeatChooseBtnActivity" />
         <activity android:name=".DemoJsBridge.JsBridgeDemoActivity" />
         <activity android:name=".DemoRxjava.RxjavaPractiseActivity" />
-        <activity android:name=".DemoVideoAndTakePhoto.VideoAndTakePhotoActivity" />
         <activity android:name=".DemoEtTest.EtTestActivity" />
-        <activity android:name=".DemoPlayMusic.PlayMusicActivity"></activity>
+        <activity android:name=".DemoPlayMusic.PlayMusicActivity" />
+
+        <receiver
+            android:name=".DemoAutoPlay.AutoPlayBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".DemoMotionEvent.MotionEventActivity" />
+        <activity android:name=".DemoConstraintLayout.ConstraintLayoutActivity"></activity>
     </application>
 
 </manifest>
