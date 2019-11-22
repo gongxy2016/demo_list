@@ -1,5 +1,6 @@
 package com.demo.gong.mydemoapplication.DemoAnimation;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,15 +25,13 @@ public class DemoAnimationActivity extends BaseActivity {
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_tween_animation :
-
+                startActivity(new Intent(this,TweenAnimationActivity.class));
                 break;
-
             case R.id.btn_frame_animation :
                 startActivity(new Intent(this,FrameAnimationActivity.class));
                 break;
-
             case R.id.btn_property_animation :
-
+                startActivity(new Intent(this,PropertyAnimationActivity.class));
                 break;
         }
     }

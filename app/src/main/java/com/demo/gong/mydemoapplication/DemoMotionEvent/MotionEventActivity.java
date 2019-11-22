@@ -2,8 +2,6 @@ package com.demo.gong.mydemoapplication.DemoMotionEvent;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.demo.gong.mydemoapplication.BaseActivity;

@@ -35,9 +35,9 @@ public class MultiSelectPopupWindows extends PopupWindow {
 
     private void initView() {
         View view = View.inflate(context, R.layout.popupwindows_multiselect, null);
-        view.startAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_in_slow));
+        view.startAnimation(AnimationUtils.loadAnimation(context, R.anim.alpha_test));
         LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout_selector);
-        linearLayout.startAnimation(AnimationUtils.loadAnimation(context, R.anim.list_top_in));
+        linearLayout.startAnimation(AnimationUtils.loadAnimation(context, R.anim.set_test));
         ListView listView = (ListView) view.findViewById(R.id.listView_selector);
 
         setWidth(ViewGroup.LayoutParams.MATCH_PARENT);

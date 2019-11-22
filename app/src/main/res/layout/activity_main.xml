@@ -128,11 +128,25 @@
                 android:layout_height="wrap_content"
                 android:text="音乐播放器,获取缓冲状态"/>
 
-            <Button
-                android:id="@+id/btn_motion_event"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="滑动冲突处理"/>
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_motion_event"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="滑动冲突处理1"/>
+                <!--<Button-->
+                    <!--android:id="@+id/btn_motion_event2"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="滑动冲突处理2"/>-->
+            </LinearLayout>
+
+
 
         </LinearLayout>
 

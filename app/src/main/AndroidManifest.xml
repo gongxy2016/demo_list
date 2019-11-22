@@ -118,7 +118,9 @@
         </receiver>
 
         <activity android:name=".DemoMotionEvent.MotionEventActivity" />
-        <activity android:name=".DemoConstraintLayout.ConstraintLayoutActivity"></activity>
+        <activity android:name=".DemoConstraintLayout.ConstraintLayoutActivity" />
+        <activity android:name=".DemoAnimation.TweenAnimationActivity" />
+        <activity android:name=".DemoAnimation.PropertyAnimationActivity"></activity>
     </application>
 
 </manifest>

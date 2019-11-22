@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:duration="4000"
+    android:fromXScale="0"
+    android:fromYScale="0"
+    android:pivotX="50%"
+    android:pivotY="0%"
+    android:toXScale="1.5"
+    android:toYScale="1.5">
+
+</scale>
+<!-- fromXScale : 动画开始时的x坐标的伸缩尺寸-->
+<!-- toXScale : 动画结束时x坐标上的伸缩尺寸-->
+<!-- pivotX="50%" : 表示缩放起点x坐标，可以是整数值，百分数或者小数三种样式-->

@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context="com.demo.gong.mydemoapplication.DemoAnimation.FrameAnimationActivity">
 
+    <Button
+        android:id="@+id/btn_start_DemoAnimationActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始"/>
+    <Button
+        android:id="@+id/btn_stop_DemoAnimationActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止"/>
     <ImageView
         android:id="@+id/iv_frame"
         android:layout_width="match_parent"

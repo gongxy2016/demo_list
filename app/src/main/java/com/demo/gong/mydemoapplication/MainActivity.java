@@ -1,7 +1,6 @@
 package com.demo.gong.mydemoapplication;
 
 import android.content.Intent;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -109,6 +108,9 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_motion_event:
                 startActivity(new Intent(MainActivity.this,MotionEventActivity.class));
                 break;
+//            case R.id.btn_motion_event2 :
+//                startActivity(new Intent(MainActivity.this,VpMotionTestActivity.class));
+//                break;
         }
     }
 
